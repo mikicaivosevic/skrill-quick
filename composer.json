@@ -1,0 +1,24 @@
+{
+  "name": "mikica/skrill-quick",
+  "description": "Skrill Quick Checkout Integration",
+  "type": "library",
+  "keywords": ["skrill", "quick", "checkout"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Mikica Ivosevic",
+      "email": "mikica.ivosevic@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Skrill\\Quick\\": "src"
+    }
+  }
+}
