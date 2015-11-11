@@ -15,13 +15,16 @@ class SkrillClient
      * SkrillClient constructor.
      * @param SkrillRequest $request
      */
-    public function __construct(SkrillRequest $request)
+    public function __construct(SkrillRequest $request = null)
     {
         $this->request = $request;
     }
 
     public function generateSID()
     {
+        if (!$this->request) {
+            throw new \Exception('Exception, you need to set SkrillRequest!');
+        }
         $ch = curl_init(self::APP_URL);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // -X
         curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0); // -0
@@ -39,5 +42,21 @@ class SkrillClient
             $this->sid = $this->generateSID();
         }
         return "https://www.skrill.com/app/payment.pl?sid={$this->sid}";
+    }
+
+    /**
+     * @return SkrillRequest
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    /**
+     * @param SkrillRequest $request
+     */
+    public function setRequest($request)
+    {
+        $this->request = $request;
     }
 }
