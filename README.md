@@ -5,6 +5,8 @@ which is recommended method for connecting to Quick Checkout.
 
 [SKrill Quick Checkout Guide.pdf](https://www.skrill.com/fileadmin/content/pdf/Skrill_Quick_Checkout_Guide.pdf)
 
+##Installation
+`composer require mikica/skrill-quick`
 
 ##Usage
 ```php
@@ -20,3 +22,6 @@ $client = new \Skrill\Quick\SkrillClient($request);
 $client->getRedirectUrl(); //return redirect url
 $client->generateSID(); //return SESSION ID
 ```
+
+##Testing
+* Unit tests: ``$ vendor/bin/phpunit``
