@@ -26,7 +26,7 @@ class SkrillClient
             throw new \Exception('Exception, you need to set SkrillRequest!');
         }
         $ch = curl_init(self::APP_URL);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); // -X
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST'); //
         curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0); // -0
         curl_setopt($ch, CURLOPT_POSTFIELDS, $this->request->toArray());
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
