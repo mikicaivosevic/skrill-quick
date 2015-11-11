@@ -10,7 +10,7 @@ which is recommended method for connecting to Quick Checkout.
 ```php
 <?php
 $request = new \Skrill\Quick\SkrillRequest();
-$request->pay_to_email = 'mikica.ivosevic@gmail.com';
+$request->pay_to_email = 'skrill.merchant.email@gmail.com';
 $request->amount = '100';
 $request->currency = 'RSD';
 $request->language = 'RS';
