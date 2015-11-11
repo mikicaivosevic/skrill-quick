@@ -18,4 +18,5 @@ $request->prepare_only = '1';
 
 $client = new \Skrill\Quick\SkrillClient($request);
 $client->getRedirectUrl(); //return redirect url
+$client->generateSID(); //return SESSION ID
 ```
